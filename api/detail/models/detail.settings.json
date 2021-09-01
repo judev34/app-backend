@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details",
+  "info": {
+    "name": "Detail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "order": {
+      "via": "details",
+      "model": "order"
+    },
+    "product": {
+      "via": "details",
+      "model": "product"
+    }
+  }
+}
